@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvape_market=self.webpackChunkvape_market||[]).push([[4299],{1880:(O,t,e)=>{e.r(t),e.d(t,{default:()=>P});var E=e(67294),s=e(57993),_=e(86706),n=e(36364),a=e(92458);const P=()=>{const r=(0,_.v9)(n._);return E.createElement(s.O4,{permissions:r.settings["api-tokens"].create},E.createElement(a.Z,null))}}}]);
