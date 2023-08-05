@@ -107,6 +107,7 @@ coverage
 ############################
 
 .env
+build
 license.txt
 exports
 *.cache

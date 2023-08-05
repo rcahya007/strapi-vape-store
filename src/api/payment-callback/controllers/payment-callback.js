@@ -20,6 +20,19 @@ module.exports = createCoreController(
 
       let dataUpdate = {};
 
+      const check_data = await strapi
+        .service("api::payment-callback.payment-callback")
+        .find(tampung.data.history.order_id);
+      if (check_data.pagination.total == 0) {
+        await strapi
+          .service("api::payment-callback.payment-callback")
+          .create(tampung);
+      } else {
+        await strapi
+          .service("api::payment-callback.payment-callback")
+          .update(check_data.results[0].id, tampung);
+      }
+
       if (tampung.data.history.transaction_status == "settlement") {
         dataUpdate = {
           data: {
@@ -34,14 +47,11 @@ module.exports = createCoreController(
         };
       }
 
-      let updateOrder = await strapi
+      await strapi
         .service("api::order.order")
         .update(tampung.data.history.order_id, dataUpdate);
 
-      // @ts-ignore
-      const result = await strapi
-        .service("api::payment-callback.payment-callback")
-        .create(tampung);
+      return tampung;
     },
   })
 );
