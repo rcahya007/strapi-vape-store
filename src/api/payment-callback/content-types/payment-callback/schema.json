@@ -4,7 +4,8 @@
   "info": {
     "singularName": "payment-callback",
     "pluralName": "payment-callbacks",
-    "displayName": "PaymentCallback"
+    "displayName": "PaymentCallback",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,9 @@
   "attributes": {
     "history": {
       "type": "json"
+    },
+    "order_id": {
+      "type": "integer"
     }
   }
 }
