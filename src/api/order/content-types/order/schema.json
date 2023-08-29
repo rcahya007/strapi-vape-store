@@ -23,9 +23,6 @@
     "delivery_address": {
       "type": "string"
     },
-    "courir_name": {
-      "type": "string"
-    },
     "shipping_cost": {
       "type": "decimal"
     },
@@ -36,6 +33,24 @@
         "success_payment",
         "error_payment"
       ]
+    },
+    "discount": {
+      "type": "float"
+    },
+    "shopping_fee": {
+      "type": "float"
+    },
+    "voucher_data": {
+      "type": "json"
+    },
+    "raja_ongkir": {
+      "type": "json"
+    },
+    "berat_semua_barang": {
+      "type": "float"
+    },
+    "items": {
+      "type": "json"
     }
   }
 }

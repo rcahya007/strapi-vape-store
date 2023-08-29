@@ -28,12 +28,20 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "product_release": {
       "type": "date"
     },
     "product_stock": {
+      "type": "integer"
+    },
+    "product_weight": {
       "type": "integer"
     }
   }
