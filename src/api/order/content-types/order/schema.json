@@ -51,6 +51,9 @@
     },
     "items": {
       "type": "json"
+    },
+    "userId": {
+      "type": "integer"
     }
   }
 }
